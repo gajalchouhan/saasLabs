@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse; 
+  width: 70%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+
+}
+
+th, td {
+  border: 1px solid lightgray;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+}
+
+.button {
+  margin: 16px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  padding: 8px 12px;
+}
