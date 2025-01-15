@@ -4,11 +4,13 @@ import React, { useState,  useEffect } from 'react';
 
 function App() {
 
+  // create a state to store the intial data and current page index value.
   const [data , setData] = useState([]);
   const [currentPage , setCurrentPage] = useState(1);
   const itemPerPage = 5;
 
 
+  // uses to fetch the call 
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,11 +25,13 @@ function App() {
     fetchData();
   }, []);
 
+  // Calculate the Index veriable;
   let totalPage = data.length/itemPerPage;
   let startingIndex = (currentPage -1) * itemPerPage;
   let endIndex = startingIndex + itemPerPage;
   let currentPageItem = data.slice(startingIndex, endIndex);
 
+  // help to get previous page
   const handlePreviousPage = () => {
     if(currentPage > 1)
       {
@@ -35,6 +39,7 @@ function App() {
       }  
   }
 
+  // help to get the next page;
   const handleNextPage = () => {
     if(currentPage < totalPage) {
       setCurrentPage(currentPage + 1);
